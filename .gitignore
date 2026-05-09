@@ -1,6 +1,4 @@
 .DS_Store
 .venv
 .vscode
-datasets
-runs
 yolo26*.pt
