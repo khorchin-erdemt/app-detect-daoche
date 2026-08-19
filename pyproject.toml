@@ -2,12 +2,11 @@
 name = "detect-daoche"
 version = "0.0.1"
 requires-python = ">=3.14"
-dependencies = [
-  "mypy",
-  "pyright",
-  "ruff",
-  "ultralytics>=8.4.78",
-]
+dependencies = ["ultralytics>=8.4.78"]
+
+[[tool.uv.index]]
+url = "https://repo.huaweicloud.com/repository/pypi/simple"
+default = true
 
 [tool.ruff]
 line-length = 1000
@@ -28,7 +27,7 @@ select = [
   "RUF",
   "S602", # flake8-bandit: subprocess-popen-with-shell-equals-true
 ]
-ignore = ["B008", "B011", "E501", "RUF001"]
+ignore = ["B008", "B011", "E501", "RUF001", "RUF003"]
 
 [tool.ruff.lint.isort]
 combine-as-imports = true
