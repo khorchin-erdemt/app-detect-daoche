@@ -5,7 +5,7 @@ requires-python = ">=3.14"
 dependencies = ["ultralytics>=8.4.78"]
 
 [dependency-groups]
-dev = ["ipykernel", "mypy", "pyright"]
+dev = ["jupyter", "mypy", "pyright"]
 
 [[tool.uv.index]]
 url = "https://repo.huaweicloud.com/repository/pypi/simple"
