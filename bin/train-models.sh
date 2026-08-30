@@ -2,9 +2,9 @@
 
 set -e
 
-yolo train project=$1 name=$0 model=$0 data=datasets/$1/configs.yaml \
+yolo train project=$2 name=$1 model=$1.pt data=datasets/$2/configs.yaml \
   epochs=200 batch=32 imgsz=640 device=0 workers=4 patience=20 augment=True
 
-yolo val model=$1/$0/weights/best.pt data=datasets/$1/configs.yaml split=test
+yolo val model=$2/$1/weights/best.pt data=datasets/$2/configs.yaml split=test
 
-yolo export model=$1/$1/weights/best.pt format=onnx
+yolo export model=$2/$1/weights/best.pt format=onnx
