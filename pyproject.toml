@@ -2,7 +2,7 @@
 name = "detect-daoche"
 version = "0.0.1"
 requires-python = ">=3.14"
-dependencies = ["ultralytics>=8.4.78"]
+dependencies = ["ultralytics"]
 
 [dependency-groups]
 dev = ["jupyter", "mypy", "pyright"]
