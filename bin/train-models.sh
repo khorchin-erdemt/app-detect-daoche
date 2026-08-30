@@ -2,17 +2,14 @@
 
 set -e
 
-m=""
-d=""
-
 while [[ $# -gt 0 ]]; do
-case "$1" in
+case $1 in
     -m)
-    m="$2"
+    m=$2
     shift 2
     ;;
     -d)
-    d="$2"
+    d=$2
     shift 2
     ;;
 esac
