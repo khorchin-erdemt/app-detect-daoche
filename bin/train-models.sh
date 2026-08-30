@@ -5,11 +5,17 @@ set -e
 m=""
 d=""
 
-while getopts ":m:d" opt; do
-    case $opt in
-        m) m="$OPTARG" ;;
-        d) d="$OPTARG" ;;
-    esac
+while [[ $# -gt 0 ]]; do
+case "$1" in
+    -m)
+    m="$2"
+    shift 2
+    ;;
+    -d)
+    d="$2"
+    shift 2
+    ;;
+esac
 done
 
 yolo train project=$d name=$m model=$m.pt data=datasets/$d/configs.yaml \
